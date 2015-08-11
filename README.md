@@ -8,6 +8,8 @@ CNPJ Validator on jQuery
  $(document).ready(function(){
    $("#cnpj").cnpj(function(){
      alert('Invalid CNPJ'); // CallBack for invalid cases
+   },function(){
+     // callback for valid cases (remove error css classes, by example)
    });
  });
  ```
