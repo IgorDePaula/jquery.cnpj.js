@@ -36,34 +36,31 @@
                 return false;
 
             // Valida DVs
-            tamanho = cnpj.length - 2
-            numeros = cnpj.substring(0, tamanho);
-            digitos = cnpj.substring(tamanho);
+            numeros = cnpj.substring(0, 12);
+            digitos = cnpj.substring(12);
             soma = 0;
-            pos = tamanho - 7;
-            for (i = tamanho; i >= 1; i--) {
-                soma += numeros.charAt(tamanho - i) * pos--;
-                if (pos < 2)
-                    pos = 9;
+            pos = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+            for (i = 0; i < 12; i++) {
+                soma += parseInt(numeros[i]) * parseInt(pos[i]);
             }
-            resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-            if (resultado !== digitos.charAt(0))
+            resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+            if (parseInt(resultado) !== parseInt(digitos[0])) {
                 return false;
+            } else {
+                numeros = cnpj.substring(0, 13);
+                soma = 0;
+                pos = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+                for (i = 0; i < 13; i++) {
+                    soma += parseInt(numeros[i]) * parseInt(pos[i]);
+                }
+                resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+                if (parseInt(resultado) !== parseInt(digitos[1]))
+                    return false;
 
-            tamanho = tamanho + 1;
-            numeros = cnpj.substring(0, tamanho);
-            soma = 0;
-            pos = tamanho - 7;
-            for (i = tamanho; i >= 1; i--) {
-                soma += numeros.charAt(tamanho - i) * pos--;
-                if (pos < 2)
-                    pos = 9;
+                return true;
+
             }
-            resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-            if (resultado !== digitos.charAt(1))
-                return false;
 
-            return true;
 
         };
     };
