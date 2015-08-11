@@ -1,5 +1,5 @@
 /**
- * Plugin para validação de cnpj em query
+ * Plugin para validação de cnpj em jquery. Olhar arquivo index.html para exemplo
  * Data: 11/08/2015
  * Base do código: http://www.geradorcnpj.com/javascript-validar-cnpj.htm. Acesso: 11/08/2015
  */
