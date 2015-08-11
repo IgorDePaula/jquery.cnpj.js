@@ -1,24 +1,28 @@
 {
-  "name": "jquery-cnpj-validator",
-  "version": "0.0.0",
-  "authors": [
-    "Igor C. de Paula <principe.borodin@gmail.com>"
-  ],
-  "description": "CNPJ Validator in JQuery",
-  "main": "jquery.cnpj.js",
-  "keywords": [
-    "jquery",
-    "CNPJ"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "jquery": "~2.1.4"
-  }
+    "name": "jquery-cnpj-validator",
+    "version": "0.0.0",
+    "authors": [
+        "Igor C. de Paula <principe.borodin@gmail.com>"
+    ],
+    "description": "CNPJ Validator in JQuery",
+    "main": "jquery.cnpj.js",
+    "keywords": [
+        "jquery",
+        "CNPJ"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "~2.1.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/IgorDePaula/jquery.cnpj.js.git"
+    }
 }
