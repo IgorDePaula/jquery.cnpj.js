@@ -4,13 +4,17 @@
  * Base do código: http://www.geradorcnpj.com/javascript-validar-cnpj.htm. Acesso: 11/08/2015
  */
 (function ($) {
-    $.fn.cnpj = function (callback) {
+    $.fn.cnpj = function (callbackError,callbackSuccess) {
 
         $(this).on('blur', function () {
             var val = $(this).val().replace(/[^\d]+/g, '');
             if (val.length === 14) {
                 if (!isValid(val)) {
-                    return callback();
+                    return callbackError();
+                }
+                else
+                {
+                     return callbackSuccess();
                 }
             }
         });
